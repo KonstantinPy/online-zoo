@@ -9,7 +9,6 @@
 body {
   font-family: Roboto;
   color: #ffffff;
-  max-width: 1600px;
   margin: auto; }
 
 .button {
@@ -46,7 +45,7 @@ body {
   margin: 0 auto; }
 
 .header {
-  width: 1600px;
+  width: 100%;
   height: 80px;
   background: #000000; }
   .header .header__container {
@@ -80,11 +79,7 @@ body {
       font-size: 16px;
       line-height: 140%; }
 
-.main {
-  max-width: 1600px; }
-
 .intro {
-  max-width: 1600px;
   background: url(../../assets/imgs/panda\ bg.jpg) no-repeat center/cover;
   height: 386px; }
   .intro .wrapper {
@@ -92,7 +87,6 @@ body {
 
 .donate {
   height: 1482px;
-  max-width: 1600px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
@@ -325,8 +319,7 @@ body {
 
 .footer {
   background: #111115;
-  height: 443px;
-  max-width: 1600px; }
+  height: 443px; }
   .footer .footer__wrapper {
     max-width: 1160px;
     max-height: 443px;

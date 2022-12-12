@@ -28,7 +28,7 @@ $border: linear-gradient(
 body {
   font-family: $font;
   color: #ffffff;
-  max-width: 1600px;
+
   margin: auto;
 }
 .button {
@@ -61,10 +61,8 @@ body {
 .header {
   position: absolute;
   top: 0;
-
   margin: auto;
-
-  width: 1600px;
+  width: 100%;
   height: 80px;
   background: #000000;
 
@@ -102,7 +100,6 @@ body {
 }
 
 .intro {
-  max-width: 1600px;
   background: url(../../assets/imgs/panda_bg1.jpg) no-repeat center/cover;
 
   height: 780px;
@@ -142,11 +139,9 @@ body {
   }
 }
 
-
-
 .your__favor {
   height: 1829px;
-  max-width: 1600px;
+
   color: #333b41;
 }
 
@@ -311,7 +306,7 @@ body {
 
 .feed {
   max-height: 1004px;
-  width: 1600px;
+
   padding: 69px 0px 100px 0px;
   background: linear-gradient(
       315.75deg,
@@ -427,7 +422,7 @@ body {
 }
 .testimonials {
   max-height: 919px;
-  width: 1600px;
+
   padding: 140px 0px 204px 0px;
   background: url(../../assets/imgs/leav_foto.svg);
   background-repeat: no-repeat;
@@ -575,7 +570,7 @@ body {
 .footer {
   background: #111115;
   height: 443px;
-  max-width: 1600px;
+
   .footer__wrapper {
     max-width: 1160px;
     max-height: 443px;
@@ -717,7 +712,7 @@ body {
     }
   }
 }
-.watch::before{
+.watch::before {
   content: "";
   position: absolute;
   width: 465px;
@@ -726,5 +721,5 @@ body {
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   border-radius: 50%;
   top: -72px;
-    left: -76px;
+  left: -76px;
 }
