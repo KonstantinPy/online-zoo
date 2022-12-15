@@ -557,6 +557,9 @@ body {
         @media screen and (max-width: 450px) {
           .donate .friend__wrapper .donate__amount-wrapper .donate__amount::before {
             width: 85%; } }
+        @media screen and (max-width: 420px) {
+          .donate .friend__wrapper .donate__amount-wrapper .donate__amount::before {
+            width: 84%; } }
         @media screen and (max-width: 400px) {
           .donate .friend__wrapper .donate__amount-wrapper .donate__amount::before {
             width: 83%; } }

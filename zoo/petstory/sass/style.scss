@@ -211,7 +211,7 @@ body {
     padding-top: 34px;
     height: 373px;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 400px) {
     height: 187px;
     margin-top: 34px;
     padding-top: 0px;
@@ -237,7 +237,7 @@ body {
       height: 339px;
       position: relative;
     }
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 400px) {
       height: 187px;
     }
     .watch {
@@ -264,6 +264,10 @@ body {
         left: 265px;
         width: 128px;
         height: 102.5px;
+      }
+      @media screen and (max-width: 400px) {
+        top: 75px;
+        left: 199px;
       }
       @media screen and (max-width: 320px) {
         top: 42px;
@@ -334,6 +338,10 @@ body {
       @media screen and (max-width: 639px) {
         top: 256px;
         left: 13px;
+      }
+      @media screen and (max-width: 400px) {
+        top: 214px;
+        left: 10px;
       }
       @media screen and (max-width: 320px) {
         top: 207px;
@@ -1263,7 +1271,6 @@ body {
   }
 }
 
-
 .footer {
   background: #111115;
   height: 443px;
@@ -1551,9 +1558,9 @@ body {
     }
     @media screen and (max-width: 639px) {
       top: -85px;
-    right: -172px;
+      right: -172px;
     }
-    
+
     @media screen and (max-width: 380px) {
       top: -91px;
       right: -163px;
