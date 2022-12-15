@@ -344,14 +344,23 @@ body {
   height: 1829px;
 
   color: #333b41;
+  @media screen and (max-width: 1500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   @media screen and (max-width: 1000px) {
     height: 1744px;
+  }
+  @media screen and (max-width: 999px) {
+   height: 1900px;   
   }
   @media screen and (max-width: 640px) {
     height: 1477px;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 639px) {
     height: 2054px;
+    
   }
 }
 
@@ -360,24 +369,31 @@ body {
     url(../../assets/imgs/strelitzia\ 1.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, right bottom;
-  padding-bottom: 100px;
-  @media screen and (max-width: 1000px) {
-    padding-bottom: 141px;
+  
+  height: 1106px;
+  @media screen and (max-width: 1440px) {
     background-image: url(../../assets/imgs/palm_smalldesk.svg),
       url(../../assets/imgs/strelitzia_smalldesk.svg);
   }
-  @media screen and (max-width: 640px) {
-    padding-bottom: 101px;
+  @media screen and (max-width: 1000px) {
+    
+    height: 1072px;
+    
+  }
+  @media screen and (max-width: 999px) {
+    
+    height: 970px;
     background-image: url(../../assets/imgs/palm_tablet.svg),
       url(../../assets/imgs/strelitzia_tablet.svg);
   }
-  @media screen and (max-width: 320px) {
-    margin-top: 37px;
-    padding-bottom: 60px;
+  @media screen and (max-width: 639px) {
+    
+    height: 1522px;
     background-image: url(../../assets/imgs/palm_mobile.svg),
       url(../../assets/imgs/strelitzia_mobile.svg);
     background-position: left bottom, right 100.24%;
   }
+  
 }
 
 .backstage {
@@ -385,20 +401,33 @@ body {
   background-image: url(../../assets/imgs/flower_foto2.jpg);
   background-repeat: no-repeat;
   background-position: right 10%;
+  @media screen and (max-width: 1500px) {
+    background-image: url(../../assets/imgs/flower_tablet.svg); 
+    background-position: right 20%;
+    padding-bottom: 0px;
+  }
   @media screen and (max-width: 1000px) {
-    padding: 110px 0px 142px 0px;
+    padding-top: 110px;
     background-image: none;
   }
-  @media screen and (max-width: 640px) {
-    display: block;
-    padding: 70px 20px 79px 20px;
-    background-image: url(../../assets/imgs/flower_tablet.svg);
-    background-position: right -5px;
+  @media screen and (max-width: 999px) {
+      padding-top: 70px;
+      background-image: url(../../assets/imgs/flower_tablet.svg);
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 640px) {
+    
+  display: block;
+  padding: 70px 20px 0px 20px;
+   
+  background-position: right -5px;
+  }
+  @media screen and (max-width: 639px) {
+     padding: 115px 10px 0px 10px; 
+  }
+  @media screen and (max-width: 639px) {
     background-image: url(../../assets/imgs/flower_mobile.svg);
     background-position: right 38px;
-    padding: 115px 10px 0px 10px;
+    
   }
   .backstage__container {
     max-width: 1160px;
@@ -406,41 +435,59 @@ body {
     display: flex;
     gap: 87px;
     margin: auto;
-    @media screen and (max-width: 1000px) {
-      max-width: 940px;
-
-      margin: 0 auto;
-      gap: 31px;
+    @media screen and (max-width: 1500px) {
+    gap: 31px;
     }
+    @media screen and (max-width: 1280px) {
+      max-width: 940px;
+     
+      margin: 0 auto;
+      
+    }
+    @media screen and (max-width: 999px) {
+      flex-direction: column;
+      max-width: 640px;
+      display: block;
+    }
+    
     .backstage__image {
       min-width: 609px;
       height: 408px;
       background: url(../../assets/imgs/bamboo-cap.svg) no-repeat center;
       background-size: cover;
-      @media screen and (max-width: 1000px) {
+      
+      @media screen and (max-width: 1500px) {
         min-width: 455px;
         height: 408px;
+      }
+      @media screen and (max-width: 999px) {
+        width: 455px;
+        margin-bottom: 20px;
       }
       @media screen and (max-width: 640px) {
         display: none;
       }
     }
     .backstage__article {
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1330px) {
         margin-top: -10px;
+        padding-right: 35px;
+      }
+      @media screen and (max-width: 1000px) {
+      padding-right: 0px;
       }
       .backstage__title {
         font-size: 48px;
         line-height: 120%;
         font-weight: 400;
         margin-bottom: 20px;
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1330px) {
           margin-bottom: 22px;
         }
         @media screen and (max-width: 640px) {
           margin-left: 5px;
         }
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 639px) {
           font-size: 24px;
           margin-left: 0px;
           margin-bottom: 11px;
@@ -455,7 +502,7 @@ body {
           margin-right: 104px;
           margin-bottom: 30px;
         }
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 639px) {
           margin: 0px 0px 20px 2px;
         }
       }
@@ -468,12 +515,11 @@ body {
           margin-left: 4px;
           margin-bottom: 19px;
         }
-        @media screen and (max-width: 320px) {
-          font-size: 24px;
-        }
-        @media screen and (max-width: 320px) {
+        
+        @media screen and (max-width: 639px) {
           margin-left: 3px;
           margin-bottom: 9px;
+          font-size: 24px;
         }
       }
       .backstage__text2 {
@@ -482,7 +528,7 @@ body {
         @media screen and (max-width: 640px) {
           margin-right: 104px;
         }
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 639px) {
           margin-right: 0px;
         }
       }
@@ -490,23 +536,22 @@ body {
   }
 }
 
-.slider__container {
-}
+
 .slider {
   display: grid;
   grid-template-columns: repeat(3, 366px);
   grid-template-rows: 426px 426px;
   grid-gap: 20px 30px;
   overflow: hidden;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1330px) {
     grid-template-columns: repeat(3, 293px);
     grid-template-rows: 354px 354px;
     grid-gap: 92px 29px;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 999px) {
     grid-gap: 69px 22px;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 639px) {
     grid-template-columns: 285px;
     grid-template-rows: repeat(4, 332px);
     grid-gap: 20px 0px;
@@ -520,15 +565,19 @@ body {
   border-radius: 100px;
   border: 0.3px solid #ffffff;
   top: -469px;
+  @media screen and (max-width: 1330px) {
+    top: -438px;
+  }
+  
 }
 .right__arrow {
   position: absolute;
   right: -64px;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1130px) {
     left: 58.6%;
     top: -434px;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 999px) {
     left: 335px;
     top: -435px;
   }
@@ -536,11 +585,11 @@ body {
 .left__arrow {
   position: absolute;
   left: -66px;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1130px) {
     left: 35.3%;
     top: -435px;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 999px) {
     left: 243px;
     top: -435px;
   }
@@ -563,13 +612,14 @@ body {
   width: 1190px;
   margin: auto;
   overflow: hidden;
-  @media screen and (max-width: 1000px) {
-    max-width: 940px;
+  @media screen and (max-width: 1330px) {
+     max-width: 940px;
   }
-  @media screen and (max-width: 640px) {
+  
+  @media screen and (max-width: 999px) {
     max-width: 600px;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 639px) {
     max-width: 320px;
     height: 1388px;
   }
@@ -580,20 +630,20 @@ body {
   margin: auto;
 }
 .pets__card {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 999px) {
     width: 285px;
     height: 332px;
   }
   .pets__border {
     border: 1px solid #fa6f32;
     border-radius: 5px;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 999px) {
       height: 332px;
     }
 
     .pets__frame {
       overflow: hidden;
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 999px) {
         border-radius: 3px;
       }
       .pets__image {
@@ -687,13 +737,14 @@ body {
   width: 1190px;
   position: relative;
   margin: auto;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1330px) {
     max-width: 1000px;
   }
-  @media screen and (max-width: 640px) {
+ 
+  @media screen and (max-width: 999px) {
     max-width: 640px;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 639px) {
     display: none;
   }
 }
