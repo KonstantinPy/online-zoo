@@ -91,8 +91,6 @@ body {
   outline: none;
 }
 
-
-
 .wrapper {
   max-width: 1160px;
   margin: 0 auto;
@@ -663,6 +661,7 @@ body {
   @media screen and (max-width: 999px) {
     max-width: 600px;
   }
+
   @media screen and (max-width: 639px) {
     max-width: 320px;
     height: 1388px;
@@ -1069,61 +1068,84 @@ body {
   }
 }
 .testimonials {
-  max-height: 919px;
-
-  padding: 140px 0px 204px 0px;
   background: url(../../assets/imgs/leav_foto.svg);
   background-repeat: no-repeat;
   background-position: right bottom;
 
   background-position: right 126%;
   z-index: -1;
-  @media screen and (max-width: 1000px) {
-    padding: 103px 0px 164px 0px;
+  max-height: 918px;
+  @media screen and (max-width: 1280px) {
     background: url(../../assets/imgs/leav_smalldesk.svg) no-repeat right bottom;
     background-position: right 117%;
   }
+  @media screen and (max-width: 1000px) {
+    max-height: 1000px;
+    padding-bottom: 43px;
+  }
   @media screen and (max-width: 640px) {
-    padding: 61px 0px 80px 0px;
     background: url(../../assets/imgs/leav_tablet.svg) no-repeat right bottom;
     background-position: right 115%;
+    padding-bottom: 23px;
   }
   @media screen and (max-width: 320px) {
-    padding: 30px 10px 0px 10px;
-    height: 580px;
     background: url(../../assets/imgs/leav_mobile.svg) no-repeat right bottom;
     background-position: right 106%;
+    padding-bottom: 31px;
   }
 
   .testimonials__wrapper {
-    max-width: 1160px;
-    max-height: 575px;
+    max-width: 1190px;
+    display: flex;
+    flex-direction: column;
+    padding: 143px 0.94%;
+    justify-content: center;
+    align-items: center;
     margin: auto;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 180px;
     @media screen and (max-width: 1000px) {
-      padding: 0px 28px;
+      padding: 102px 0px 100px 0px;
+      max-width: 940px;
     }
     @media screen and (max-width: 640px) {
-      padding: 0 20px;
+      padding: 58px 3.125%;
+      width: 100%;
+      overflow: hidden;
     }
     @media screen and (max-width: 320px) {
-      padding: 0px;
+      padding: 30px 10px;
     }
   }
 }
+
 .testimonials__slider {
+  position: absolute;
+  left: 2px;
+  top: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 31px;
   position: relative;
   z-index: 1;
-  height: 391px;
+  height: 393px;
+
+  width: 3500px;
+  align-items: center;
+  margin: auto;
   @media screen and (max-width: 1000px) {
-    justify-content: center;
+    gap: 28px;
   }
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: 640px) {
     flex-direction: column;
-    margin: auto;
+    max-width: 600px;
+    top: 3px;
+    left: 0px;
     gap: 19px;
-    max-height: 358px;
+  }
+  @media screen and (max-width: 320px) {
+    max-width: 300px;
   }
 
   @media screen and (max-width: 1000px) {
@@ -1131,33 +1153,38 @@ body {
       display: none;
     }
   }
+
   .testimonials__card {
-    width: 268px;
+    width: 266px;
+    height: 390px;
+
     @media screen and (max-width: 1000px) {
-      padding: 0px 15px;
-      min-width: 323px;
+      width: 291px;
+      height: 391px;
     }
-    @media screen and (max-width: 999px) {
+    @media screen and (max-width: 640px) {
       width: auto;
-      padding: 0px;
+      cursor: pointer;
     }
+
     @media screen and (max-width: 320px) {
-      min-width: 300px;
+      width: 293px;
     }
 
     .testimonials__border {
-      padding: 15px 15px 20px 16px;
+      padding: 14px 16px;
       background: #f1f3f2;
       box-sizing: border-box;
-      height: 391px;
+      height: 390px;
       border-radius: 20px;
       position: relative;
-      @media screen and (max-width: 999px) {
+      @media screen and (max-width: 640px) {
+        padding: 13px 10px;
         height: 105px;
-        padding: 11px 13px 20px 12px;
       }
+
       @media screen and (max-width: 320px) {
-        padding: 8px 23px 19px 14px;
+        padding: 8px 10px;
       }
       .testimonials__review {
         font-weight: 300;
@@ -1167,9 +1194,9 @@ body {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 17;
+        -webkit-line-clamp: 16;
         -webkit-box-orient: vertical;
-        @media screen and (max-width: 999px) {
+        @media screen and (max-width: 640px) {
           -webkit-line-clamp: 2;
         }
         @media screen and (max-width: 320px) {
@@ -1232,6 +1259,7 @@ body {
       right: -2px;
       left: -2px;
       bottom: -2px;
+
       background: $border;
       border-radius: 24px;
       z-index: -1;
@@ -1243,19 +1271,36 @@ body {
   font-size: 36px;
   line-height: 130%;
   text-align: center;
-  padding-bottom: 47px;
+  margin-bottom: 43px;
   @media screen and (max-width: 1000px) {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
+
   @media screen and (max-width: 320px) {
     font-size: 24px;
-    padding-bottom: 17px;
+    margin-bottom: 17px;
   }
 }
 .testimonials__slider-wrapper {
   margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1163px;
+
+  @media screen and (max-width: 1200px) {
+    width: 866px;
+  }
   @media screen and (max-width: 1000px) {
-    max-width: 940px;
+    width: 938px;
+  }
+  @media screen and (max-width: 940px) {
+    width: 616px;
+  }
+  @media screen and (max-width: 640px) {
+    margin: 0;
+    height: 357px;
+    overflow: scroll;
+    width: 100%;
   }
 }
 .scroller {
@@ -1273,7 +1318,7 @@ body {
     width: 390px;
     height: 6px;
   }
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: 640px) {
     display: none;
   }
 }
@@ -1319,6 +1364,7 @@ body {
 .button__4 {
   border-radius: 5px;
   margin: 31px 0px 0px 0px;
+  align-self: flex-start;
   @media screen and (max-width: 1000px) {
     margin: 54px 0px 0px 0px;
   }
@@ -1328,6 +1374,7 @@ body {
   }
   @media screen and (max-width: 640px) {
     width: 242px;
+    margin-top: 40px;
   }
   @media screen and (max-width: 320px) {
     margin-top: 30px;
