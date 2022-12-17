@@ -1037,7 +1037,7 @@ body {
         max-width: 940px; } }
     @media screen and (max-width: 640px) {
       .testimonials .testimonials__wrapper {
-        padding: 58px 3.125%;
+        padding: 58px 2.9%;
         width: 100%;
         overflow: hidden; } }
     @media screen and (max-width: 320px) {
@@ -1058,6 +1058,8 @@ body {
   position: relative;
   z-index: 1;
   height: 393px;
+  -webkit-transition: all 1.4s ease 0s;
+  transition: all 1.4s ease 0s;
   width: 3500px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1075,7 +1077,8 @@ body {
       max-width: 600px;
       top: 3px;
       left: 0px;
-      gap: 19px; } }
+      gap: 19px;
+      width: 98%; } }
   @media screen and (max-width: 320px) {
     .testimonials__slider {
       max-width: 300px; } }

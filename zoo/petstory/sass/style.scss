@@ -1087,6 +1087,7 @@ body {
     background: url(../../assets/imgs/leav_tablet.svg) no-repeat right bottom;
     background-position: right 115%;
     padding-bottom: 23px;
+    
   }
   @media screen and (max-width: 320px) {
     background: url(../../assets/imgs/leav_mobile.svg) no-repeat right bottom;
@@ -1110,7 +1111,7 @@ body {
       max-width: 940px;
     }
     @media screen and (max-width: 640px) {
-      padding: 58px 3.125%;
+      padding: 58px 2.9%;
       width: 100%;
       overflow: hidden;
     }
@@ -1130,7 +1131,7 @@ body {
   position: relative;
   z-index: 1;
   height: 393px;
-
+  transition: all 1.4s ease 0s;
   width: 3500px;
   align-items: center;
   margin: auto;
@@ -1143,6 +1144,7 @@ body {
     top: 3px;
     left: 0px;
     gap: 19px;
+    width: 98%;
   }
   @media screen and (max-width: 320px) {
     max-width: 300px;
