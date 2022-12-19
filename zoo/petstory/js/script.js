@@ -129,7 +129,7 @@ slider.addEventListener("click", function (e) {
 //   }
 // });
 const burger = document.querySelector(".header__burger");
-
+const header = document.querySelector(".header")
 const burgerItems = document.querySelectorAll(".burger__item");
 const burgerMenu = document.querySelector(".header__nav");
 const logo = document.querySelector(".header__logo");
@@ -144,8 +144,11 @@ function toggleMenu() {
   burgerItems.forEach((e) => {
     e.classList.toggle("open");
   });
-  setTimeout(()=>{logo.classList.toggle("open");
-  logoText.classList.toggle("open");},3000);
+  setTimeout(()=>{
+  logo.classList.toggle("open");
+  logoText.classList.toggle("open")
+  header.classList.toggle("open")
+  ;},3000);
   copyright.classList.toggle("open");
   burgerMenu.classList.toggle("open");
   burgerMenu.classList.toggle("to-right");
