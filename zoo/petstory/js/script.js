@@ -137,18 +137,18 @@ const logoText = document.querySelector(".header__logo-text");
 const bodyHidden = document.body;
 const navList = document.querySelectorAll(".header__link");
 const overlay = document.querySelector(".overlay");
-const copyright = document.querySelector(".copyright")
-
+const copyright = document.querySelector(".copyright");
 
 function toggleMenu() {
   // burger.classList.toggle('open');
   burgerItems.forEach((e) => {
     e.classList.toggle("open");
   });
-  logoText.classList.toggle("open");
+  setTimeout(()=>{logo.classList.toggle("open");
+  logoText.classList.toggle("open");},3000);
   copyright.classList.toggle("open");
   burgerMenu.classList.toggle("open");
-  logo.classList.toggle("open");
+  burgerMenu.classList.toggle("to-right");
   bodyHidden.classList.toggle("open");
   overlay.classList.toggle("open");
 }
@@ -162,3 +162,26 @@ function addEventListeners() {
 }
 
 addEventListeners();
+
+// let timer = setInterval(function() {
+//   if (animation complete) clearInterval(timer);
+//   else increase x.style.left by 2px
+// }, 20);
+// let start = Date.now();
+
+// let timer = setInterval(function() {
+
+//   let timePassed = Date.now() - start;
+
+//   if (timePassed >= 2000) {
+//     clearInterval(timer);
+//     return;
+//   }
+
+//   draw(timePassed);
+
+// }, 20);
+
+// function draw(timePassed) {
+//   burgerMenu.style.left = timePassed / 3.125 + 'px';
+// }

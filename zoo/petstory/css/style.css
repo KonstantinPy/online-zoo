@@ -26,6 +26,23 @@ body {
   body.open {
     overflow-y: hidden; }
 
+.to-right {
+  -webkit-animation-name: toRight;
+          animation-name: toRight;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s; }
+
+@-webkit-keyframes toRight {
+  from {
+    right: -640px; }
+  to {
+    right: 0px; } }
+
+@keyframes toRight {
+  from {
+    right: -640px; }
+  to {
+    right: 0px; } }
 .darkenedArea {
   position: fixed;
   top: 0px;
@@ -267,13 +284,11 @@ body {
       .header .header__container .header__nav .overlay.open {
         display: block; }
     .header .header__container .header__nav.open {
-      position: fixed;
-      top: 0px;
+      position: absolute;
+      top: 0;
       right: 0px;
       display: block;
       width: 100%;
-      -webkit-transition: 1s;
-      transition: 1s;
       background: rgba(0, 0, 0, 0.25); }
     .header .header__container .copyright {
       width: 105px;
