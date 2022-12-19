@@ -59,6 +59,7 @@ darkenedArea.addEventListener("click", close);
 
 function close() {
   darkenedArea.style.display = "none";
+  document.body.classList.remove("no-scroll");
   let selectTestimonial = document.querySelector(".popup");
   selectTestimonial.remove();
 }
@@ -127,3 +128,37 @@ slider.addEventListener("click", function (e) {
 //     popup.classList.remove("popup-active");
 //   }
 // });
+const burger = document.querySelector(".header__burger");
+
+const burgerItems = document.querySelectorAll(".burger__item");
+const burgerMenu = document.querySelector(".header__nav");
+const logo = document.querySelector(".header__logo");
+const logoText = document.querySelector(".header__logo-text");
+const bodyHidden = document.body;
+const navList = document.querySelectorAll(".header__link");
+const overlay = document.querySelector(".overlay");
+const copyright = document.querySelector(".copyright")
+
+
+function toggleMenu() {
+  // burger.classList.toggle('open');
+  burgerItems.forEach((e) => {
+    e.classList.toggle("open");
+  });
+  logoText.classList.toggle("open");
+  copyright.classList.toggle("open");
+  burgerMenu.classList.toggle("open");
+  logo.classList.toggle("open");
+  bodyHidden.classList.toggle("open");
+  overlay.classList.toggle("open");
+}
+
+function addEventListeners() {
+  burger.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
+  navList.forEach((el) => {
+    el.addEventListener("click", toggleMenu);
+  });
+}
+
+addEventListeners();

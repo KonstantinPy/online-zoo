@@ -34,26 +34,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
-.overlay__head {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 4;
-}
-.overlay__testimonials {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 10;
-  display: none;
-}
+
 body {
   position: relative;
   font-family: $font;
@@ -61,6 +42,9 @@ body {
 
   margin: auto;
   &.no-scroll {
+    overflow-y: hidden;
+  }
+  &.open {
     overflow-y: hidden;
   }
 }
@@ -210,8 +194,8 @@ body {
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
-  @media (max-width: 640px) {
-    display: none;
+  @media screen and (max-width: 640px) {
+    color: #000000;
   }
 }
 .header__link:active,
@@ -300,6 +284,30 @@ body {
           margin: 0 auto;
         }
       }
+      .header__logo-text.open {
+        color: #fe9013;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.2;
+      }
+    }
+    .header__logo.open {
+      margin-top: 10px;
+      border-radius: 2px;
+      position: relative;
+      text-align: center;
+      margin-bottom: 0px;
+      display: inline-block;
+      width: 82px;
+      height: 52px;
+      z-index: 3;
+      border: 1px solid #fe9013;
+      & :after {
+        content: url(../../assets/icons/bamboo_burger.svg);
+        position: absolute;
+        top: 24px;
+        left: 10px;
+      }
     }
     .header__logo:hover,
     .header__logo:focus {
@@ -311,6 +319,7 @@ body {
       position: absolute;
       top: 24px;
       left: 10px;
+      z-index: -1;
       @media screen and(max-width: 640px) {
         content: url(../../assets/icons/bamboo__tablet.svg);
         top: 12px;
@@ -336,12 +345,47 @@ body {
         @media screen and (max-width: 1000px) {
           gap: 48px;
         }
+        @media screen and (max-width: 640px) {
+          flex-direction: column;
+          padding: 82px 0px 25px 20px;
+          color: #000000;
+          background: #ffffff;
+          gap: 15px;
+        }
 
         .nav__item {
           font-size: 16px;
           line-height: 140%;
+          @media screen and (max-width: 640px) {
+            font-weight: 400;
+            color: #000000;
+          }
+        }
+        .nav__item:last-child {
+          display: none;
+          @media screen and (max-width: 640px) {
+            display: block;
+          }
         }
       }
+      .overlay {
+        background-color: rgba(186, 185, 185, 0.6);
+        height: 100vh;
+        opacity: 2.3;
+        display: none;
+      }
+      .overlay.open {
+        display: block;
+      }
+    }
+    .header__nav.open {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      display: block;
+      width: 100%;
+      transition: 1s;
+      background: rgba(0, 0, 0, 0.25);
     }
     .copyright {
       width: 105px;
@@ -352,17 +396,40 @@ body {
         display: none;
       }
     }
+    .copyright.open {
+      display: block;
+    }
 
     .header__burger {
       display: none;
 
       @media screen and(max-width: 640px) {
-        background: url(../../assets/icons/burger_menu.svg) no-repeat center;
-        width: 18px;
-        height: 10px;
-        cursor: pointer;
-        padding: 10px;
+        position: relative;
         display: block;
+        min-height: 10px;
+        cursor: pointer;
+        .burger__item {
+          width: 18px;
+          height: 2px;
+          background: #ffffff;
+          margin-bottom: 2px;
+          transition: 1s;
+        }
+        .burger__item.open {
+          margin-bottom: -2px;
+
+          background: #000000;
+        }
+        .burger__item.open:nth-child(1) {
+          transform: rotate(-45deg);
+        }
+        .burger__item.open:nth-child(2) {
+          display: none;
+        }
+        .burger__item.open:nth-child(3) {
+          transform: rotate(45deg);
+          margin-bottom: 0px;
+        }
       }
     }
   }
@@ -1420,28 +1487,27 @@ body {
     }
   }
 
-//   .popup{
-//     position: fixed;
-//     top: 50%;
-//     left: 50%;
-//     width: 267px;
-//     height: 391px;
-//     overflow: auto;
-//     z-index: 11;
-//     background: white;
-//     border-radius: 20px;
-//     transform: translate(-50%, -50%);
-//     overflow: visible;
-//   .x-close {
-//     position: absolute;
-//     top: -25px;
-//     right: -40px;
-//     width: 50px;
-//     height: 50px;
-//     background: url("../../assets/icons/x_icon1.svg") no-repeat center;
-//   }
-// }
-  
+  //   .popup{
+  //     position: fixed;
+  //     top: 50%;
+  //     left: 50%;
+  //     width: 267px;
+  //     height: 391px;
+  //     overflow: auto;
+  //     z-index: 11;
+  //     background: white;
+  //     border-radius: 20px;
+  //     transform: translate(-50%, -50%);
+  //     overflow: visible;
+  //   .x-close {
+  //     position: absolute;
+  //     top: -25px;
+  //     right: -40px;
+  //     width: 50px;
+  //     height: 50px;
+  //     background: url("../../assets/icons/x_icon1.svg") no-repeat center;
+  //   }
+  // }
 }
 .testimonials__head {
   color: #333b41;
