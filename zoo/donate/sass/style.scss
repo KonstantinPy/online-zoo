@@ -503,8 +503,11 @@ body {
         height: 13.5px;
         margin-bottom: 0px;
       }
-      .donate__amount input[type="radio"]:checked + .donate__label::after {
-        opacity: 1;
+      // .donate__amount input[type="radio"]:checked + .donate__label::after {
+      //   opacity: 1;
+      // }
+      .donate__radio.active + .donate__label::after{
+          opacity: 1;
       }
       .donate__amount {
         display: flex;
@@ -530,6 +533,7 @@ body {
           width: 108.5%;
           left: -4%;
         }
+        
 
         .donate__label {
           position: relative;

@@ -463,7 +463,7 @@ body {
         .donate .friend__wrapper .donate__amount-wrapper {
           height: 13.5px;
           margin-bottom: 0px; } }
-      .donate .friend__wrapper .donate__amount-wrapper .donate__amount input[type="radio"]:checked + .donate__label::after {
+      .donate .friend__wrapper .donate__amount-wrapper .donate__radio.active + .donate__label::after {
         opacity: 1; }
       .donate .friend__wrapper .donate__amount-wrapper .donate__amount {
         display: -webkit-box;
