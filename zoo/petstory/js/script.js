@@ -1,3 +1,58 @@
+import { petsArrowLeft, petsArrowRight, petsScroller } from "./contains.js";
+
+import {
+  shuffle,
+  petsScrollLeft,
+  petsScrollRight,
+  petsRandomize,
+} from "./pets.js";
+
+let direction;
+
+petsRandomize();
+
+petsArrowRight.addEventListener("click", () => {
+  direction = 1;
+  petsScrollRight();
+});
+
+petsArrowLeft.addEventListener("click", () => {
+  direction = -1;
+  petsScrollLeft();
+});
+
+petsScroller.addEventListener("transitionend", () => {
+  if (window.innerWidth > 850) {
+    if (direction === 1) {
+      for (let i = 0; i < 6; i++) {
+        petsScroller.append(petsScroller.firstElementChild);
+      }
+    } else {
+      for (let i = 0; i < 6; i++) {
+        petsScroller.prepend(petsScroller.lastElementChild);
+      }
+    }
+  } else {
+    if (direction === 1) {
+      for (let i = 0; i < 4; i++) {
+        petsScroller.append(petsScroller.firstElementChild);
+      }
+    } else {
+      for (let i = 0; i < 4; i++) {
+        petsScroller.prepend(petsScroller.lastElementChild);
+      }
+    }
+  }
+
+  petsRandomize();
+
+  petsScroller.style.transition = "none";
+  petsScroller.style.transform = "translate(0)";
+  setTimeout(() => {
+    petsScroller.style.transition = "all 1s ease";
+  });
+});
+
 const scroller = document.querySelector(".scroller");
 const slider = document.querySelector(".testimonials__slider");
 
@@ -129,7 +184,7 @@ slider.addEventListener("click", function (e) {
 //   }
 // });
 const burger = document.querySelector(".header__burger");
-const header = document.querySelector(".header")
+const header = document.querySelector(".header");
 const burgerItems = document.querySelectorAll(".burger__item");
 const burgerMenu = document.querySelector(".header__nav");
 const logo = document.querySelector(".header__logo");
@@ -144,11 +199,11 @@ function toggleMenu() {
   burgerItems.forEach((e) => {
     e.classList.toggle("open");
   });
-  setTimeout(()=>{
-  logo.classList.toggle("open");
-  logoText.classList.toggle("open")
-  header.classList.toggle("open")
-  ;},3000);
+  setTimeout(() => {
+    logo.classList.toggle("open");
+    logoText.classList.toggle("open");
+    header.classList.toggle("open");
+  }, 3000);
   copyright.classList.toggle("open");
   burgerMenu.classList.toggle("open");
   burgerMenu.classList.toggle("to-right");
